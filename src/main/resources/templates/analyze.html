@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Вариант 2</title>
+</head>
+<body>
+    <div>
+        <div>
+            <label th:if="${show_res}">
+                <h4>Result :</h4>
+                <p th:text="${show_res}"></p>
+            </label>
+        </div>
+        <form th:action="@{/analyze}" method="post">
+            <div>
+                <label>
+                    <h4>Word :</h4>
+                    <input type="text" name="word" required/>
+                </label>
+            </div>
+            <div><input type="submit" value="Check"/></div>
+        </form>
+    </div>
+</body>
+</html>
